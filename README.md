@@ -14,11 +14,11 @@ When you push code to your GitHub repository, the GitHub Actions workflow will:
 2. AWS Access and Secret Keys stored as GitHub secrets.
 3. GitHub Actions Workflow to pass AWS credentials to Jenkins and run Terraform.
 
-## AWS IAM Policy for Terraform
-User Name = CICD-User
-AWS Credential Type = Access Key 
-Attach Policy = Administration Access       // You can change any other policy.
-Access Key and Secret Key                   // Required for Terraform.
+### AWS IAM Policy for Terraform
+- User Name = CICD-User
+- AWS Credential Type = Access Key 
+- Attach Policy = Administration Access       // You can change any other policy.
+- Access Key and Secret Key                   // Required for Terraform.
 
 ### Steps:
 
