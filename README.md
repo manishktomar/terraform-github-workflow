@@ -30,17 +30,17 @@ In your GitHub repository, go to **Settings** > **Secrets and variables** > **Ac
 These keys will be passed to Terraform to allow it to authenticate with AWS.
 
 2. Terraform Files
-You need to add the Terraform configuration files (main.tf, provider.tf, variables.tf, and output.tf) to your GitHub repository.
+- You need to add the Terraform configuration files (main.tf, provider.tf, variables.tf, and output.tf) to your GitHub repository.
 
 3. GitHub Actions Workflow (.github/workflows/**terraform.yml**)
-Create the GitHub Actions workflow in .github/workflows/terraform.yml. This workflow will handle AWS credentials, install Terraform, and run the Terraform commands when you push code to the repository.
+- Create the GitHub Actions workflow in .github/workflows/terraform.yml. This workflow will handle AWS credentials, install Terraform, and run the Terraform commands when you push code to the repository.
 
 4. Push Code to GitHub
-Once you've added the Terraform files and the GitHub Actions workflow to your repository, commit and push the changes to the main branch.
+- Once you've added the Terraform files and the GitHub Actions workflow to your repository, commit and push the changes to the main branch.
 - GitHub Actions will automatically trigger the workflow, set up AWS credentials, run Terraform, and provision the EC2 instance on AWS.
 
 5. Monitor the Workflow
-You can monitor the workflow's progress under the Actions tab in your GitHub repository. It will show the steps executed (checkout code, configure AWS credentials, Terraform init, plan, and apply).
+- You can monitor the workflow's progress under the Actions tab in your GitHub repository. It will show the steps executed (checkout code, configure AWS credentials, Terraform init, plan, and apply).
 
 #### Terraform Commands:
 - terraform init initializes Terraform in the workspace.
