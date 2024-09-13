@@ -1,6 +1,7 @@
 # Terraform and Github Workflow (Action) 
 
 This setup provides a fully automated pipeline that deploys an EC2 instance on AWS whenever code is pushed to GitHub.
+![image](https://github.com/user-attachments/assets/1e6181f7-e0d5-49c1-8b2b-d800b4069d5a)
 
 ### Trigger Jenkins Pipeline via GitHub
 
