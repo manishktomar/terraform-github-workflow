@@ -20,29 +20,26 @@ AWS Credential Type = Access Key
 Attach Policy = Administration Access       // You can change any other policy.
 Access Key and Secret Key                   // Required for Terraform.
 
-## Steps:
+### Steps:
 
-1. GitHub Secrets
-
+- 1. GitHub Secrets
 In your GitHub repository, go to **Settings** > **Secrets and variables** > **Actions** and add the following secrets:
 - AWS_ACCESS_KEY_ID
 - AWS_SECRET_ACCESS_KEY
 
 These keys will be passed to Terraform to allow it to authenticate with AWS.
 
-2. Terraform Files
+- 2. Terraform Files
 You need to add the Terraform configuration files (main.tf, provider.tf, variables.tf, and output.tf) to your GitHub repository.
 
-3. GitHub Actions Workflow (.github/workflows/**terraform.yml**)
-
+- 3. GitHub Actions Workflow (.github/workflows/**terraform.yml**)
 Create the GitHub Actions workflow in .github/workflows/terraform.yml. This workflow will handle AWS credentials, install Terraform, and run the Terraform commands when you push code to the repository.
 
-4. Push Code to GitHub
-
+- 4. Push Code to GitHub
 Once you've added the Terraform files and the GitHub Actions workflow to your repository, commit and push the changes to the main branch.
 - GitHub Actions will automatically trigger the workflow, set up AWS credentials, run Terraform, and provision the EC2 instance on AWS.
 
-5. Monitor the Workflow
+- 5. Monitor the Workflow
 You can monitor the workflow's progress under the Actions tab in your GitHub repository. It will show the steps executed (checkout code, configure AWS credentials, Terraform init, plan, and apply).
 
 #### Terraform Commands:
